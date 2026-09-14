@@ -58,7 +58,7 @@ def sampleAlgo(row):
             obj = Objective(run)
             x = finalPoint(algo(obj))
 
-            if obj.requests != cfg.budget or not obj.valid:
+            if obj.i != cfg.budget or not obj.valid:
                 return None
 
             if x.shape != (cfg.dim,) or not ((x >= 0) & (x <= 1)).all():
